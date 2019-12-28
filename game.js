@@ -24,28 +24,32 @@ function insert(b){
 }
 
 function check(XorO, position){
-    // if(position == 0 || position == 3 || position == 6){
-    //     if(a[position] == a[position+1] &&
-    //         a[position+1] == a[position+2]){
-    //         return true;
-    //     }
-    // }
-    // if(position )
-    // if(position == 0 || position == 1|| position == 2){
-    //     if(a[position] == a[position + 3] &&
-    //         a[position + 3] == a[position + 6]){
-    //         printOutput();
-    //     }
-    // }   
-    let d = XorO;
-    if(checkHorizontal(d, position) == true){
-        printOutput(d);
+     
+    if(checkHorizontal(XorO, position)|| checkVertical(XorO, position)){
+        printOutput(XorO);
     }
     
 }
 function checkVertical(XorO, position){
-    
+    let temp = 3;
+    while(temp != 0){
+        switch(position){
+            case 6:
+            case 7:
+            case 8:
+                if(a[position] == XorO) position -= 6;  
+                else return false;
+            break;
+            default: 
+            if(a[position] == XorO) position += 3;
+            else return false;
+         }//switch
+         temp--;
+    } //while
+    if(temp == 0) return true;
+    else return false;
 }
+
 function checkHorizontal(XorO, position){
     let temp = 3; 
     while(temp!=0){
