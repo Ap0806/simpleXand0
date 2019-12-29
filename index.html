@@ -1,27 +1,43 @@
 <!DOCTYPE html>
 
 <head>
-<h3 >LET'S PLAY A GAME OF X AND O</h3>
 <link rel = "stylesheet" type = "text/css" href = "game.css">
 </head>
 <body>
-    <div id = "GAME">
-    <div>
+   <h1>LET'S PLAY A GAME OF X AND O</h1>
+    <div class = "GAME"> 
+    <div class = "box">
+    <div class = "row">
             <input class = "first button" id = "1" type = "button" onclick = "insert('1')" value = " ">
             <input class = "second button" id = "2" type = "button" onclick = "insert('2')" value = " ">
             <input class = "third button" id = "3" type = "button" onclick = "insert('3')" value = " ">
     </div>
-    <div>
+    <div class = "row">
             <input class = "fourth button" id = "4" type = "button" onclick = "insert('4')" value = " ">
             <input class = "fifth button" id = "5" type = "button" onclick = "insert('5')" value = " ">
             <input class = "sixth button" id = "6" type = "button" onclick = "insert('6')" value = " ">
     </div>
-    <div>
+    <div class = "row">
             <input class = "seventh button" id = "7" type = "button" onclick = "insert('7')" value = " ">
             <input class = "eighth button" id = "8" type = "button" onclick = "insert('8')" value = " ">
             <input class = "nineth button" id = "9" type = "button" onclick = "insert('9')" value = " ">
     </div>
     </div>
+    <p>    
+        <span id = "heading">RULES FOR TIC-TAC-TOE</span><br>
+
+        1. The game is played on a grid that's 3 squares by 3 squares.<br>
+        
+        2. You are X, your friend (or the computer in this case) is O. Players take turns putting their marks in empty squares.<br>
+        
+        3. The first player to get 3 of her marks in a row (up, down, across, or diagonally) is the winner.<br>
+        
+        4. When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.<br>
+
+        To learn more, go to <a href = "https://en.wikipedia.org/wiki/Tic-tac-toe">this link.</a>
+    </p>
+    </div>
+   
     
     <script src = "game.js"></script>
 </body>

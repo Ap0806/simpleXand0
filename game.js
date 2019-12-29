@@ -16,43 +16,25 @@ function insert(b){
         a[b-1] = "O";
         check("O", b-1);
     }
-    if(x == 8){
-        window.alert("GAME OVER - NO WINNERS");
-        document.location.reload();
-    }
     x++;
 }
 
-function check(XorO, position){     
+function check(XorO, position){  
+    let checkTrue = false;
     if(checkHorizontal(XorO, position)|| 
        checkVertical(XorO, position) ||
        checkDiagonal(XorO, position)){
            printOutput(XorO);
+           checkTrue = true;
+    }
+    
+    if(x == 8 && checkTrue == false){
+        window.alert("GAME OVER - NO WINNERS");
+        document.location.reload();
     }
 }
 
 function checkDiagonal(XorO, position){
-    // switch(a[5]){
-    //     //always need to check the center element
-    //     case XorO:
-    //         switch(position){
-    //             case 0:
-    //                 if(a[8] == XorO) return true;
-    //                 return false;
-    //             case 8:
-    //                 if(a[0] == XorO) return true;
-    //                 return false;
-    //             case 2: 
-    //                 if(a[6] == XorO) return true;
-    //                 return false;
-    //             case 6:
-    //                 if(a[2] == XorO) return true;
-    //                 return false;
-    //         }//switch(position)
-    //     default: 
-    //         return false;
-    // }//switch(a[5])
-
     switch(a[4]){
         case XorO:
             switch(position){
