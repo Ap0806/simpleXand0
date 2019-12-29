@@ -1,18 +1,48 @@
-#GAME{
-    display: block;
-    align-self: center;
+.GAME{
+    margin: 0;
+    display: table;
+}
+
+.box{
+    float:left;
+}
+
+h1{
+  font-family: 'Calibri';
+  text-align: center;
+  font-size: 2.5em;
+} 
+
+span{
+    font-family: "Helvetica";
+    padding-left: 200px;
+}
+
+p{
+    float: right;
+    font-size: 1.85em;
+    font-family: 'Calibri';
+    margin-left:100px;
+    max-width: 700px;
+}
+
+.row{    
     font-size: 0;
+}
+
+a{
+    font-style: italic;
 }
 
 .button{
     background: transparent;
     padding: 0px;
-    width: 100px;
-    height: 100px;    
+    width: 150px;
+    height: 150px;    
     margin: 0px;
     /* display: inline-block; */
     text-align: center;
-    font-size: 20px;
+    font-size: 60px;
     border: 5px solid black;
     outline: 0;
     position: initial;
