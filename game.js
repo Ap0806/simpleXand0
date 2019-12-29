@@ -23,14 +23,60 @@ function insert(b){
     x++;
 }
 
-function check(XorO, position){
-     
-    if(checkHorizontal(XorO, position)|| checkVertical(XorO, position)){
-        printOutput(XorO);
+function check(XorO, position){     
+    if(checkHorizontal(XorO, position)|| 
+       checkVertical(XorO, position) ||
+       checkDiagonal(XorO, position)){
+           printOutput(XorO);
     }
-    else if(position == 3){
-        window.alert("isFalse idk why");
-    }   
+}
+
+function checkDiagonal(XorO, position){
+    // switch(a[5]){
+    //     //always need to check the center element
+    //     case XorO:
+    //         switch(position){
+    //             case 0:
+    //                 if(a[8] == XorO) return true;
+    //                 return false;
+    //             case 8:
+    //                 if(a[0] == XorO) return true;
+    //                 return false;
+    //             case 2: 
+    //                 if(a[6] == XorO) return true;
+    //                 return false;
+    //             case 6:
+    //                 if(a[2] == XorO) return true;
+    //                 return false;
+    //         }//switch(position)
+    //     default: 
+    //         return false;
+    // }//switch(a[5])
+
+    switch(a[4]){
+        case XorO:
+            switch(position){
+                case 0:
+                    if(a[4] == a[8]) return true;
+                    return false;
+                case 8:
+                    if(a[4] == a[0]) return true;
+                    return false;
+                case 2:
+                    if(a[4] == a[6]) return true;
+                    return false;
+                case 6: 
+                    if(a[4] == a[2]) return true;
+                    return false;
+                case 4: 
+                    if((a[6] == a[2] && a[6] == XorO) ||
+                       (a[0] == a[8] && a[8] == XorO)) return true;
+                    return false;              
+            }
+        break;
+        default:
+            return false;
+    }
 }
 
 function checkVertical(XorO, position){
