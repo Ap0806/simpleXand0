@@ -28,8 +28,11 @@ function check(XorO, position){
     if(checkHorizontal(XorO, position)|| checkVertical(XorO, position)){
         printOutput(XorO);
     }
-    
+    else if(position == 3){
+        window.alert("isFalse idk why");
+    }   
 }
+
 function checkVertical(XorO, position){
     let temp = 3;
     while(temp != 0){
@@ -57,13 +60,13 @@ function checkHorizontal(XorO, position){
         case 2:
         case 5: 
         case 8:
-            if(a[position] == XorO) position -= 3;  
+            if(a[position] == XorO) position -= 2;  
             else return false;          
         break;
         default: 
             if(a[position] == XorO) position++;
             else return false;
-         }//switch
+        }//switch
          temp--;
     } //while
     if(temp == 0) return true;
