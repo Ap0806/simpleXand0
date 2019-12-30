@@ -29,7 +29,9 @@ p{
     color: white;
     transition: transform 0.2s;
 }
-
+/* #display{
+    position: fixed;
+} */
 p:hover{
     transform: scale(1.15);
 }
