@@ -1,8 +1,6 @@
-//HAVE TO ADD CONDITION TO PREVENT CHANGING OF BUTTON IF VALUE ALREADY EXISTS
 let x = 0;
 let a = [" ", " ", " ", " ", " ", " ", " ", " ", " "];
 function insert(b){
-    //let bVal = document.getElementById(b).value;
     if(document.getElementById(b).value == "X" || document.getElementById(b).value == "O"){
         return;
     }

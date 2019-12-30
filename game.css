@@ -1,5 +1,5 @@
 .GAME{
-    margin: 0;
+    margin-left: 100px;
     display: table;
 }
 
@@ -14,7 +14,7 @@ h1{
 } 
 
 span{
-    font-family: "Helvetica";
+    font-family: "URW Chancery L", "cursive";
     padding-left: 200px;
 }
 
@@ -24,6 +24,14 @@ p{
     font-family: 'Calibri';
     margin-left:100px;
     max-width: 700px;
+    text-align: justify;
+    background-color: rgb(1, 38, 49);
+    color: white;
+    transition: transform 0.2s;
+}
+
+p:hover{
+    transform: scale(1.15);
 }
 
 .row{    
